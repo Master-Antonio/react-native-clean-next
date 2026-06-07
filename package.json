@@ -1,0 +1,45 @@
+{
+  "name": "react-native-clean-next",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "description": "Automating the cleaning of a React Native Project",
+  "main": "./source/index.js",
+  "bin": {
+    "react-native-clean-next": "source/index.js"
+  },
+  "scripts": {
+    "dev-init": "npx react-native init example && pushd example && npm i react-native-clean-next && popd",
+    "dev-sync": "cp -R package.json source react-native.config.js example/node_modules/react-native-clean-next/",
+    "test": "jest",
+    "lint": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Master-Antonio/react-native-clean-next.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "clean"
+  ],
+  "author": "Antonio Romeo Riga",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Master-Antonio/react-native-clean-next/issues"
+  },
+  "homepage": "https://github.com/Master-Antonio/react-native-clean-next#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.4.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^5.5.6",
+    "jest": "^30.4.2",
+    "prettier": "^3.8.3"
+  },
+  "rnpm": {
+    "plugin": "./source/plugin.js"
+  }
+}
